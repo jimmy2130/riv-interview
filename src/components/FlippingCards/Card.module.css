@@ -1,0 +1,108 @@
+.wrapper {
+	position: absolute;
+	top: var(--top);
+	bottom: var(--bottom);
+	left: var(--left);
+	right: var(--right);
+
+	z-index: var(--z-index);
+	transform: var(--transform);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wrapper {
+		animation: var(--animation);
+		will-change: transform;
+	}
+}
+
+.button {
+	composes: unstyledButton from '../UnstyledButton/UnstyledButton.module.css';
+	position: relative;
+
+	width: 560px;
+	width: 80cqi;
+	aspect-ratio: var(--width) / var(--height);
+}
+
+@keyframes left-card-covered {
+	0% {
+		transform: translate(0%, 0%) scale(100%);
+		z-index: 1;
+	}
+	50% {
+		transform: translate(-37.5%, 0%) scale(100%) perspective(100px)
+			rotateX(-1deg) rotateY(1deg);
+	}
+	75% {
+		z-index: 0;
+	}
+	100% {
+		transform: translate(var(--cover-translate), var(--cover-translate))
+			scale(var(--cover-scale));
+		z-index: 0;
+	}
+}
+
+@keyframes left-card-uncovered {
+	0% {
+		transform: translate(var(--cover-translate), var(--cover-translate))
+			scale(var(--cover-scale));
+		z-index: 0;
+	}
+	50% {
+		transform: translate(
+				calc(var(--cover-translate) - 24.375%),
+				var(--cover-translate)
+			)
+			scale(var(--cover-scale));
+	}
+	75% {
+		z-index: 1;
+	}
+	100% {
+		transform: translate(0%, 0%) scale(100%);
+		z-index: 1;
+	}
+}
+
+@keyframes right-card-covered {
+	0% {
+		transform: translate(0%, 0%) scale(100%);
+		z-index: 1;
+	}
+	50% {
+		transform: translate(37.5%, 0%) scale(100%) perspective(100px) rotateX(1deg)
+			rotateY(-1deg);
+	}
+	75% {
+		z-index: 0;
+	}
+	100% {
+		transform: translate(var(--cover-translate), var(--cover-translate))
+			scale(var(--cover-scale));
+		z-index: 0;
+	}
+}
+
+@keyframes right-card-uncovered {
+	0% {
+		transform: translate(var(--cover-translate), var(--cover-translate))
+			scale(var(--cover-scale));
+		z-index: 0;
+	}
+	50% {
+		transform: translate(
+				calc(var(--cover-translate) + 26.25%),
+				var(--cover-translate)
+			)
+			scale(var(--cover-scale));
+	}
+	75% {
+		z-index: 1;
+	}
+	100% {
+		transform: translate(0%, 0%) scale(100%);
+		z-index: 1;
+	}
+}

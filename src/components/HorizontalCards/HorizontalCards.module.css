@@ -1,0 +1,35 @@
+.wrapper {
+	height: var(--scroll-length);
+	position: relative;
+	padding-bottom: var(--image-height);
+}
+
+.sectionLinkWrapper {
+	position: absolute;
+	top: var(--link-top);
+	left: 48px;
+}
+
+.stickyContainer {
+	position: sticky;
+	top: var(--top);
+	width: 100%;
+	background: deeppink;
+}
+
+.imageContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+
+	display: flex;
+	gap: var(--gap);
+
+	transform: var(--scroll-distance);
+	will-change: transform;
+}
+
+.imageWrapper {
+	list-style: none;
+}

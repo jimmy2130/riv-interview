@@ -1,0 +1,9 @@
+.wrapper {
+	isolation: isolate;
+
+	position: relative;
+	aspect-ratio: var(--aspect-ratio);
+
+	container-type: inline-size;
+	container-name: flippingCardsWrapper;
+}

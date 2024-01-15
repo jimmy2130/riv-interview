@@ -1,0 +1,27 @@
+.wrapper {
+	height: 100vh; /* Fallback for legacy users */
+	height: 100dvh;
+
+	display: grid;
+	place-content: center;
+	text-align: center;
+
+	padding-left: 64px;
+	padding-right: 64px;
+
+	position: relative;
+}
+
+.sectionLinkWrapper {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 48px;
+}
+
+@media (max-width: calc(768 / 16 * 1rem)) {
+	.wrapper {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+}

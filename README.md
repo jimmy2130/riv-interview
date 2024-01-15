@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Riv Interview
 
-## Getting Started
+我第一關就被刷掉了，所以我沒有參加後面的測驗。但既然我都花了兩天時間做了他們的考
+古題，我想我還是放上來，以展示我的程度。
 
-First, run the development server:
+# Challenge 1 - Dynamic Header
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+往下滑動待 scrollTop > 300px 後隱藏 Header，並於滾輪向上捲動時觸發顯示 Header，
+隱藏及顯示的過程請加上 transition 讓畫面流暢
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Challenge 2 - Flipping Cards
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+請實現卡片切換的特效 (請參考 https://www.riv-studio.com/projects/keyuan-gallery
+中的兩張卡片點擊後的 shuffle 效果)，引用透視視角確保視覺往真實視角逼近
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Challenge 3 - Video Section
 
-## Learn More
+entry ratio 大於 30% 後播放影片，小於時主動暫停播放。當 invisible 時，主動將播放
+進度 reset 回 time = 0，目的是確保每次 User 重新進入該區塊時，能看到影片重新播放
+，並於顯示比例較小時主動暫停播放避免佔據效能
 
-To learn more about Next.js, take a look at the following resources:
+# Challenge 4 - Scroll Hijacking
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+該區當滑鼠進入後，scrolling 的效果是讓元素橫向移動來閱覽橫向擴展的內容
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 用到的技術
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js、React、TypeScript、CSS Modules

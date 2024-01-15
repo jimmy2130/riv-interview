@@ -1,0 +1,25 @@
+.wrapper {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 120px;
+	background: #f0f0f0;
+
+	display: grid;
+	place-content: center;
+
+	opacity: var(--reduce-motion-opacity);
+	transition: var(--reduce-motion-transition);
+	will-change: opacity;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wrapper {
+		opacity: revert;
+		transform: var(--transform);
+		transition: var(--transition);
+		will-change: transform;
+	}
+}

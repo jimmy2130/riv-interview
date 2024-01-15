@@ -1,0 +1,23 @@
+.link {
+	--width: 20px;
+	--height: 20px;
+	display: inline-block; /* for safari */
+	outline-offset: 8px;
+	opacity: 0;
+	scroll-margin-top: var(--scroll-margin-top-vh);
+	scroll-margin-top: var(--scroll-margin-top-dvh);
+	scroll-margin-bottom: var(--scroll-margin-bottom-vh);
+	scroll-margin-bottom: var(--scroll-margin-bottom-dvh);
+}
+
+.link:focus {
+	opacity: 1;
+}
+
+.icon {
+	display: block;
+	width: var(--width);
+	height: var(--height);
+	background: black;
+	border-radius: 4px;
+}
